@@ -20,6 +20,7 @@
 export type QpdfModule = {
   _qpdf_init(): number;
   _qpdf_cleanup(qpdfData: number): void;
+  _qpdf_get_qpdf_version(): number;
   _qpdf_has_error(qpdfData: number): number;
   _qpdf_get_error(qpdfData: number): number;
   _qpdf_get_error_full_text(qpdfData: number, qpdfError: number): number;

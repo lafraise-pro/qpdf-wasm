@@ -102,6 +102,12 @@ class Qpdf {
     return this.module.HEAPU8.slice(bufferPtr, bufferPtr + bufferSize);
   }
 
+  version(): string {
+    const versionPtr = this.module._qpdf_get_qpdf_version();
+    const versionString = this.module.UTF8ToString(versionPtr);
+    return versionString;
+  }
+
   private throwIfError() {
     const qpdfError = this.module._qpdf_get_error(this.qpdfData);
     if (qpdfError === 0) return;

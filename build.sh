@@ -71,7 +71,7 @@ function build_wasm() {
 
 function build_node_module() {
     npx --package=typescript tsc --build ./tsconfig.json
-    cp --reflink=auto ./qpdf.js ./qpdf.wasm dist/
+    cp --reflink=auto ./qpdf.js ./qpdf.wasm ./qpdf.d.ts dist/
 }
 
 build_libjpeg

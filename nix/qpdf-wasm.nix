@@ -48,7 +48,7 @@ buildNpmPackage {
       -sNO_DISABLE_EXCEPTION_CATCHING \
       -sMODULARIZE
     node_modules/.bin/tsc --build ./tsconfig.json
-    cp qpdf.js qpdf.wasm dist/
+    cp qpdf.js qpdf.wasm qpdf.d.ts dist/
     runHook postBuild
   '';
 

@@ -1,12 +1,13 @@
 {
   "name": "@lafraise/qpdf",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "homepage": "https://github.com/lafraise-pro/qpdf-wasm",
   "repository": "github:lafraise-pro/qpdf-wasm",
   "license": "AGPL-3.0-or-later",
   "author": "Victor Schubert <victor@lafraise.pro>",
   "files": [
     "dist/index.d.ts",
+    "dist/qpdf.d.ts",
     "dist/index.js",
     "dist/qpdf.js",
     "dist/qpdf.wasm",
@@ -19,7 +20,7 @@
   },
   "exports": {
     ".": {
-      "types": "./index.ts",
+      "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     }
   },

@@ -1,6 +1,6 @@
 {
   "name": "@lafraise/qpdf",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "homepage": "https://github.com/lafraise-pro/qpdf-wasm",
   "repository": "github:lafraise-pro/qpdf-wasm",
   "license": "AGPL-3.0-or-later",

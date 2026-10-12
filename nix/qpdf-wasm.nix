@@ -1,6 +1,7 @@
 {
   lib,
   buildNpmPackage,
+  importNpmLock,
   src,
   pkg-config,
   emscriptenCacheHook,
@@ -17,7 +18,8 @@ buildNpmPackage {
   inherit (packageJson) version;
 
   inherit src;
-  npmDepsHash = "sha256-SKp0wsrt+CLnGcteANmiuC0jXdDb9tSQvQ7A/aH+w00=";
+  npmDeps = importNpmLock { npmRoot = src; };
+  npmConfigHook = importNpmLock.npmConfigHook;
 
   nativeBuildInputs = [
     pkg-config
